@@ -10,34 +10,44 @@
         android:id="@+id/buttonAsker"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="2dp"
-        android:layout_marginTop="63dp"
+        android:layout_marginTop="45dp"
         android:onClick="askerAtesEt"
         android:text="Asker Ateş Et"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/buttonTankci"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="29dp"
-        android:onClick="tankciAtesEt"
-        android:text="Tankçı Ateş Et"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonAsker" />
-
     <TextView
         android:id="@+id/textViewMesaj"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="37dp"
-        android:layout_marginTop="29dp"
+        android:layout_marginTop="40dp"
         android:text="Mesaj"
         android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/buttonTopcu"
+        app:layout_constraintStart_toStartOf="@+id/buttonTopcu"
+        app:layout_constraintTop_toBottomOf="@+id/buttonTopcu" />
+
+    <Button
+        android:id="@+id/buttonTopcu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:onClick="topcuAtesEt"
+        android:text="Topçu Ateş Et"
+        app:layout_constraintEnd_toEndOf="@+id/buttonTankci"
+        app:layout_constraintStart_toStartOf="@+id/buttonTankci"
         app:layout_constraintTop_toBottomOf="@+id/buttonTankci" />
+
+    <Button
+        android:id="@+id/buttonTankci"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:onClick="tankciAtesEt"
+        android:text="Tankçı Ateş Et"
+        app:layout_constraintEnd_toEndOf="@+id/buttonAsker"
+        app:layout_constraintStart_toStartOf="@+id/buttonAsker"
+        app:layout_constraintTop_toBottomOf="@+id/buttonAsker" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

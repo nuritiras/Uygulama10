@@ -8,8 +8,9 @@ import android.widget.Button;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
-    public Asker asker;
-    public Tankci tankci;
+    Asker asker =new Asker();
+    Tankci  tankci = new Tankci();
+    Topcu topcu=new Topcu();
     String mesaj = "";
     TextView textViewMesaj;
     Button buttonAsker,buttonTankci;
@@ -17,8 +18,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        asker = new Asker();
-        tankci = new Tankci();
+
+
         textViewMesaj = findViewById(R.id.textViewMesaj);
         buttonAsker = findViewById(R.id.buttonAsker);
         buttonTankci = findViewById(R.id.buttonTankci);
@@ -31,6 +32,11 @@ public class MainActivity extends AppCompatActivity {
 
     public void tankciAtesEt(View view) {
         mesaj = tankci.atesEt();
+        textViewMesaj.setText(mesaj);
+    }
+
+    public void topcuAtesEt(View view) {
+        mesaj =topcu.atesEt();
         textViewMesaj.setText(mesaj);
     }
 }
